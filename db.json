@@ -44,6 +44,16 @@
       "id": 3,
       "firstName": "Sara",
       "lastName": "Wilson"
+    },
+    {
+      "firstName": "Darragh James",
+      "lastName": "Duffy",
+      "id": 4
+    },
+    {
+      "firstName": "Darragh",
+      "lastName": "Duffy",
+      "id": 5
     }
   ]
 }
