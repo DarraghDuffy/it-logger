@@ -8,6 +8,9 @@ import AddLogModal from './components/logs/AddLogModal';
 import EditLogModal from './components/logs/EditLogModal';
 import AddTechModal from './components/tech/AddTechModal';
 import TechListModal from './components/tech/TechListModal';
+import { Provider } from 'react-redux';
+import store from './store';
+
 import './App.css';
 
 function App() {
@@ -16,17 +19,19 @@ function App() {
     M.AutoInit();
   }, []);
   return (
-    <Fragment>
-      <SearchBar></SearchBar>
-      <div className='container'>
-        <Logs></Logs>
-        <AddBtn></AddBtn>
-        <EditLogModal></EditLogModal>
-        <AddLogModal></AddLogModal>
-        <AddTechModal></AddTechModal>
-        <TechListModal></TechListModal>
-      </div>
-    </Fragment>
+    <Provider store={store}>
+      <Fragment>
+        <SearchBar></SearchBar>
+        <div className='container'>
+          <Logs></Logs>
+          <AddBtn></AddBtn>
+          <EditLogModal></EditLogModal>
+          <AddLogModal></AddLogModal>
+          <AddTechModal></AddTechModal>
+          <TechListModal></TechListModal>
+        </div>
+      </Fragment>
+    </Provider>
   );
 }
 
